@@ -1,0 +1,11 @@
+mysite:
+    build: .
+    ports:
+        - '3000:3000'
+    links:
+        - mongo
+    volumes:
+        - .:/home/sara/mysite 
+        - /home/sara/mysite/node_modules
+mongo:
+    image: mongo:3.3

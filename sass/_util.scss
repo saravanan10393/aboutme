@@ -1,0 +1,57 @@
+
+// margin overriding
+.margin-null{
+    margin:0px !important;
+}
+.margin-bottom-null{
+    margin-bottom: 0px !important;
+}
+.margin-top-null{
+    margin-top: 0px !important;
+}
+.margin-left-null{
+    margin-left: 0px !important;
+}
+.margin-right-null{
+    margin-right: 0px !important;
+}
+
+// padding overriding
+
+.padding-null{
+    padding: 0px !important;
+}
+.padding-top-null{
+    padding-top: 0px !important;
+}
+.padding-left-null{
+    padding-left: 0px !important;
+}
+.padding-right-null{
+    padding-right: 0px !important;
+}
+.padding-bottom-null{
+    padding-bottom: 0px !important;
+}
+
+// position overriding
+.relative{
+    position: relative !important;
+}
+
+.absolute{
+    position: absolute !important;
+}
+
+.center-x{
+    @include center-x;
+}
+
+.center-y{
+    @include center-y;
+
+}
+
+.center-content{
+   @include center-content(50%,50%);
+}

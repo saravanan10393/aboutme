@@ -1,0 +1,182 @@
+/*  
+@mixin cover-background ()
+Creates a full width background image on an element. 
+
+-Parameters:
+--Required:
+$img-uri: URI of image you want to use as the background 
+
+--Optional:
+$background-top:  Defaults to "center - sets the "top" value of the background position
+$background-left: Defaults to "center - sets the "left" value of the background position.
+$background-attachment: Defaults to "fixed" - allows you to specify background attachment.
+
+*/
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+  zoom: 1; }
+
+.row {
+  width: 100%; }
+  .row .col {
+    float: left; }
+
+.margin-null {
+  margin: 0px !important; }
+
+.margin-bottom-null {
+  margin-bottom: 0px !important; }
+
+.margin-top-null {
+  margin-top: 0px !important; }
+
+.margin-left-null {
+  margin-left: 0px !important; }
+
+.margin-right-null {
+  margin-right: 0px !important; }
+
+.padding-null {
+  padding: 0px !important; }
+
+.padding-top-null {
+  padding-top: 0px !important; }
+
+.padding-left-null {
+  padding-left: 0px !important; }
+
+.padding-right-null {
+  padding-right: 0px !important; }
+
+.padding-bottom-null {
+  padding-bottom: 0px !important; }
+
+.relative {
+  position: relative !important; }
+
+.absolute {
+  position: absolute !important; }
+
+.center-x {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.center-y {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.center-content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+html,
+body {
+  height: 100%; }
+
+body {
+  background: url("../img/content-background.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: initial; }
+
+.body-bg-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); }
+
+.abstract-container {
+  width: 90%; }
+  .abstract-container .box {
+    height: 250px;
+    width: 250px;
+    background: #fff; }
+    .abstract-container .box div {
+      text-align: center;
+      text-transform: uppercase; }
+      .abstract-container .box div i {
+        font-size: 48px; }
+      .abstract-container .box div p {
+        font-size: 20px;
+        margin-top: 15px; }
+  .abstract-container .long-box {
+    width: calc(100% - 520px);
+    height: 100%;
+    background: #fff; }
+  .abstract-container .header {
+    height: 250px;
+    margin-bottom: 5px; }
+    .abstract-container .header .profile-image {
+      background: url("../img/sara.jpg") no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-attachment: initial;
+      margin-right: 5px; }
+    .abstract-container .header .designation {
+      box-sizing: border-box;
+      background: #fff;
+      margin: 0 5px;
+      padding: 20px; }
+      .abstract-container .header .designation .name {
+        width: calc(100% - 300px);
+        height: 100%; }
+        .abstract-container .header .designation .name div {
+          padding-left: 15px;
+          line-height: 50px; }
+          .abstract-container .header .designation .name div h2 {
+            font-size: 50px; }
+          .abstract-container .header .designation .name div p {
+            color: blue;
+            font-size: 30px; }
+      .abstract-container .header .designation .sociallinks {
+        height: 100%;
+        width: 300px; }
+        .abstract-container .header .designation .sociallinks .downloadresume {
+          width: 100%;
+          height: 60px;
+          padding: 0px 30px;
+          line-height: 60px;
+          box-sizing: border-box;
+          border: solid 1px #dcdcdc;
+          font-size: 25px;
+          text-align: center; }
+          .abstract-container .header .designation .sociallinks .downloadresume a {
+            float: left; }
+        .abstract-container .header .designation .sociallinks .links {
+          width: 100%;
+          height: 50px;
+          margin-top: 10px; }
+          .abstract-container .header .designation .sociallinks .links .link {
+            width: 50px;
+            height: inherit;
+            border: solid 1px #eed;
+            font-size: 20px;
+            line-height: 50px;
+            text-align: center;
+            margin-right: 30px; }
+            .abstract-container .header .designation .sociallinks .links .link:last-child {
+              margin: 0px !important; }
+    .abstract-container .header .blog {
+      margin-left: 5px; }
+  .abstract-container .content {
+    margin-top: 10px;
+    height: 510px; }
+    .abstract-container .content .aboutme {
+      margin: 0 5px 10px 0px; }
+    .abstract-container .content .resume {
+      margin: 5px 5px 0 0; }
+    .abstract-container .content .mywork {
+      margin: 0 0 10px 5px; }
+    .abstract-container .content .contactme {
+      margin: 5px 0 0 5px; }
+    .abstract-container .content .showcase {
+      margin: 0 5px; }

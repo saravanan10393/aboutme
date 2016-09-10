@@ -1,0 +1,71 @@
+@mixin truncateText($overflow: ellipsis){
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: $overflow;
+}
+
+/*  
+@mixin cover-background ()
+Creates a full width background image on an element. 
+
+-Parameters:
+--Required:
+$img-uri: URI of image you want to use as the background 
+
+--Optional:
+$background-top:  Defaults to "center - sets the "top" value of the background position
+$background-left: Defaults to "center - sets the "left" value of the background position.
+$background-attachment: Defaults to "fixed" - allows you to specify background attachment.
+
+*/
+@mixin cover-background($img-uri, $background-top:"center", $background-left:"center", $background-attachment:"initial") {
+  background: url($img-uri) no-repeat unquote($background-top) unquote($background-left); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: unquote($background-attachment);  
+}
+
+
+
+@mixin center-content($X, $Y, $position:relative){
+    position: $position;
+
+    @if $X != "" and $Y != ""{
+        top: $Y;
+        left: $X;
+        transform: translate(-$X, -$Y)
+    }
+    @else if $X != ""{
+        left: $X;
+        transform: translateX(-$X);
+    }
+    @else if $Y != ""{
+        top: $Y;
+        transform: translateY(-$Y);
+    }
+}
+@mixin center-x($X:50%, $position:relative){
+    @include center-content($X,"",$position);
+}
+@mixin center-y($Y:50%, $position:relative){
+    @include center-content("",$Y, $position);
+}
+
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+%clearfix {
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+      zoom:1;
+    }
+}

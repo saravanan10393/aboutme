@@ -1,0 +1,20 @@
+{
+  "name": "mysite",
+  "version": "1.0.0",
+  "description": "persional portfolio",
+  "main": "app.js",
+  "scripts": {
+    "compilesass": "grunt",
+    "start": "lite-server -p 9000"
+  },
+  "author": "saravanan",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "lite-server": "^2.2.2"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.0"
+  }
+}

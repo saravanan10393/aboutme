@@ -1,0 +1,11 @@
+$fullHeight : 100%;
+$fullWidth : 100%;
+$bannerHeight : 200px;
+
+.row{
+    width: $fullWidth;
+    .col{
+        float: left;
+    }
+    @extend %clearfix;
+}
